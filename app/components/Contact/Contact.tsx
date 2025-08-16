@@ -6,9 +6,9 @@ import ReactConfetti from 'react-confetti';
 import { SuccessModal } from './SuccessModal';
 import { 
   EnvelopeIcon, 
-  PhoneIcon, 
-  ChatBubbleBottomCenterTextIcon 
+  PhoneIcon 
 } from "@heroicons/react/24/outline";
+import { InstagramIcon } from './InstagramIcon';
 
 export default function Contact() {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -177,7 +177,7 @@ export default function Contact() {
             <ContactItem
               icon={EnvelopeIcon}
               title="Email"
-              content="zakiofficialva@gmail.com"
+              content="rk9954299@gmail.com"
             />
             <ContactItem
               icon={PhoneIcon}
@@ -185,9 +185,9 @@ export default function Contact() {
               content="+92 3289735423"
             />
             <ContactItem
-              icon={ChatBubbleBottomCenterTextIcon}
+              icon={InstagramIcon}
               title="Social Media"
-              content="@zakiofficialva"
+              content="@im_rohailkhan"
             />
           </motion.div>
         </div>
@@ -239,4 +239,4 @@ function ContactItem({
       </div>
     </div>
   );
-} 
+}

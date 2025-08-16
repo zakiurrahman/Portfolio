@@ -5,69 +5,69 @@ import ServiceCard from './ServiceCard';
 
 type Service = {
   title: string;
-  icon: "admin" | "marketing" | "technical" | "creative" | "research" | "support";
+  icon: "editing" | "motion" | "color" | "audio" | "effects" | "production";
   items: readonly string[];
 };
 
 const services: Service[] = [
   {
-    title: "Administrative Support",
-    icon: "admin",
+    title: "Video Editing",
+    icon: "editing",
     items: [
-      "Calendar Management",
-      "Email Organization",
-      "Document Preparation",
-      "Data Entry"
+      "Cutting & Trimming",
+      "Transitions & Effects",
+      "Multi-Camera Editing",
+      "Timeline Organization"
     ]
   },
   {
-    title: "Digital Marketing",
-    icon: "marketing",
+    title: "Motion Graphics",
+    icon: "motion",
     items: [
-      "Social Media Management",
-      "Content Creation",
-      "Email Campaigns",
-      "Market Research"
+      "2D Animation",
+      "Title Sequences",
+      "Logo Animation",
+      "Kinetic Typography"
     ]
   },
   {
-    title: "Technical Support",
-    icon: "technical",
+    title: "Color Grading",
+    icon: "color",
     items: [
-      "Website Maintenance",
-      "CRM Management",
-      "Basic Graphic Design",
-      "E-commerce Support"
+      "Color Correction",
+      "Cinematic Looks",
+      "Mood Enhancement",
+      "Skin Tone Balancing"
     ]
   },
   {
-    title: "Creative Services",
-    icon: "creative",
+    title: "Audio Production",
+    icon: "audio",
     items: [
-      "Blog Writing",
-      "Newsletter Design",
-      "Social Media Graphics",
-      "Presentation Design"
+      "Audio Mixing",
+      "Sound Design",
+      "Music Synchronization",
+      "Noise Reduction"
     ]
   },
   {
-    title: "Research & Analysis",
-    icon: "research",
+    title: "Visual Effects",
+    icon: "effects",
     items: [
-      "Market Research",
-      "Competitor Analysis",
-      "Data Analysis",
-      "Industry Reports"
+      "Green Screen Compositing",
+      "Special Effects",
+      "Object Removal",
+      "Digital Enhancement"
     ]
   },
   {
-    title: "Customer Support",
-    icon: "support",
+    title: "Post-Production",
+    icon: "production",
     items: [
-      "Email Support",
-      "Chat Support",
-      "Ticket Management",
-      "Customer Follow-ups"
+      "Final Rendering",
+      "Format Optimization",
+      "Quality Control",
+      "Delivery & Export"
     ]
   }
 ] as const;
@@ -85,7 +85,7 @@ export default function Services() {
         >
           <h2 className="text-4xl font-bold mb-4 text-white">My Services</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Comprehensive virtual assistance solutions tailored to elevate your business operations
+            Professional video editing services to transform your content and captivate your audience
           </p>
         </motion.div>
         

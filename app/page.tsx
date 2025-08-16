@@ -1,6 +1,7 @@
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
+import Video from './components/Video/Video';
 import Navbar from './components/Navbar/Navbar';
 import Contact from './components/Contact/Contact';
 
@@ -11,6 +12,7 @@ export default async function Home() {
       <Hero />
       <Services />
       <Skills />
+      <Video />
       <Contact />
     </div>
   );

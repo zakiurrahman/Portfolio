@@ -6,13 +6,22 @@ import { BackgroundBoxes } from "./ui/background-boxes";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    if (typeof window !== 'undefined') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const words = [
     {
-      text: "Virtual",
+      text: "Video",
       className: "text-blue-500",
     },
     {
-      text: "Assistant",
+      text: "Editing",
       className: "text-purple-500",
     },
     {
@@ -31,16 +40,12 @@ export default function Hero() {
       className: "text-gray-300",
     },
     {
-      text: "Zaki",
+      text: "Rohail",
       className: "text-blue-300",
     },
     {
-      text: "Ur",
+      text: "Khan",
       className: "text-purple-300",
-    },
-    {
-      text: "Rehman",
-      className: "text-pink-300",
     },
   ];
 
@@ -104,20 +109,20 @@ export default function Hero() {
           <TypewriterEffect words={nameWords} className="text-2xl font-light" />
         </div>
         <p className="text-xl text-white [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)] mb-8 animate-fadeIn animation-delay-200">
-          Empowering Your Business Through Professional Virtual Support
+          Bringing Your Vision to Life Through Professional Video Editing
         </p>
         <p className="text-lg text-white/90 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)] mb-12 animate-fadeIn animation-delay-400">
-          Streamline your operations, boost productivity, and focus on what matters most - growing your business.
+          Transform your raw footage into compelling stories, enhance your brand presence, and captivate your audience with cinematic quality.
         </p>
         <div className="flex justify-center gap-6 animate-fadeIn animation-delay-600">
           <button 
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => scrollToSection('services')}
             className="px-8 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors"
           >
             Explore Services
           </button>
           <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => scrollToSection('contact')}
             className="px-8 py-3 border-2 border-white text-white rounded-lg shadow-lg hover:bg-white hover:text-purple-900 transition-all"
           >
             Get in Touch
@@ -126,4 +131,4 @@ export default function Hero() {
       </motion.div>
     </section>
   );
-} 
+}

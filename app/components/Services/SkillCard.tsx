@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CommandLineIcon } from "@heroicons/react/24/outline";
+import { VideoCameraIcon } from "@heroicons/react/24/outline";
 
 interface SkillCardProps {
   skill: {
     name: string;
-    icon: typeof CommandLineIcon;
+    icon: typeof VideoCameraIcon;
     proficiency: number;
-    category: "Technical" | "Creative" | "Management" | "Communication";
+    category: "Technical" | "Creative";
   };
   index: number;
 }

@@ -3,34 +3,36 @@
 import { motion } from "framer-motion";
 import SkillCard from "../Services/SkillCard";
 import { 
-  CommandLineIcon, 
-  PresentationChartLineIcon,
-  DocumentTextIcon,
-  ChatBubbleBottomCenterTextIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  PencilSquareIcon,
-  CogIcon
+  VideoCameraIcon,
+  FilmIcon,
+  SwatchIcon,
+  SpeakerWaveIcon,
+  SparklesIcon,
+  ComputerDesktopIcon,
+  PlayIcon,
+  CogIcon,
+  EyeIcon,
+  MusicalNoteIcon
 } from "@heroicons/react/24/outline";
 
 type Skill = {
   name: string;
-  icon: typeof CommandLineIcon;
+  icon: typeof VideoCameraIcon;
   proficiency: number;
-  category: "Technical" | "Creative" | "Management" | "Communication";
+  category: "Technical" | "Creative";
 };
 
 const skills: Skill[] = [
-  { name: "Project Management", icon: PresentationChartLineIcon, proficiency: 90, category: "Management" },
-  { name: "MS Office Suite", icon: DocumentTextIcon, proficiency: 95, category: "Technical" },
-  { name: "Social Media", icon: GlobeAltIcon, proficiency: 85, category: "Creative" },
-  { name: "CRM Systems", icon: ChartBarIcon, proficiency: 88, category: "Technical" },
-  { name: "Email Marketing", icon: ChatBubbleBottomCenterTextIcon, proficiency: 92, category: "Communication" },
-  { name: "Data Analysis", icon: PresentationChartLineIcon, proficiency: 85, category: "Technical" },
-  { name: "Content Writing", icon: PencilSquareIcon, proficiency: 90, category: "Creative" },
-  { name: "Customer Service", icon: ChatBubbleBottomCenterTextIcon, proficiency: 95, category: "Communication" },
-  { name: "Automation Tools", icon: CogIcon, proficiency: 82, category: "Technical" },
-  { name: "Digital Marketing", icon: GlobeAltIcon, proficiency: 88, category: "Creative" }
+  { name: "Adobe Premiere Pro", icon: VideoCameraIcon, proficiency: 95, category: "Technical" },
+  { name: "Final Cut Pro", icon: FilmIcon, proficiency: 90, category: "Technical" },
+  { name: "DaVinci Resolve", icon: SwatchIcon, proficiency: 88, category: "Technical" },
+  { name: "After Effects", icon: SparklesIcon, proficiency: 92, category: "Creative" },
+  { name: "Audio Editing", icon: SpeakerWaveIcon, proficiency: 85, category: "Technical" },
+  { name: "Color Grading", icon: EyeIcon, proficiency: 90, category: "Creative" },
+  { name: "Motion Graphics", icon: PlayIcon, proficiency: 87, category: "Creative" },
+  { name: "Video Compression", icon: CogIcon, proficiency: 82, category: "Technical" },
+  { name: "Sound Design", icon: MusicalNoteIcon, proficiency: 88, category: "Creative" },
+  { name: "Multi-Cam Editing", icon: ComputerDesktopIcon, proficiency: 85, category: "Technical" }
 ];
 
 export default function Skills() {
@@ -53,7 +55,7 @@ export default function Skills() {
         >
           <h2 className="text-4xl font-bold mb-4 text-white">Technical Skills</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Leveraging cutting-edge tools and technologies to deliver exceptional results
+            Mastering industry-standard video editing software and techniques to create stunning visual content
           </p>
         </motion.div>
 
@@ -65,4 +67,4 @@ export default function Skills() {
       </div>
     </section>
   );
-} 
+}

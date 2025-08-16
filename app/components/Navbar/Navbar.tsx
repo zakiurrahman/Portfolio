@@ -33,11 +33,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection('hero')} 
-            className="relative w-12 h-12 hover:opacity-80 transition-opacity"
+            className="relative w-16 h-16 hover:opacity-80 transition-opacity"
           >
             <Image
-              src="/logo.png"
-              alt="Logo"
+              src="/New-logo.png"
+              alt="Rohail Logo"
               fill
               className="object-contain"
               priority
@@ -45,7 +45,7 @@ export default function Navbar() {
           </button>
           
           <div className="flex gap-8">
-            {['services', 'skills', 'contact'].map((item) => (
+            {['services', 'skills', 'video', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -62,4 +62,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-} 
+}

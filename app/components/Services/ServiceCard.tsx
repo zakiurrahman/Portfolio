@@ -3,50 +3,62 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { 
-  CalendarIcon, 
-  ChartBarIcon, 
-  CommandLineIcon,
-  DocumentTextIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  PresentationChartLineIcon,
-  ShoppingCartIcon,
-  PencilSquareIcon,
-  MagnifyingGlassIcon,
-  ChatBubbleBottomCenterTextIcon
+  VideoCameraIcon,
+  SparklesIcon,
+  SwatchIcon,
+  SpeakerWaveIcon,
+  EyeIcon,
+  CogIcon,
+  ScissorsIcon,
+  PlayIcon,
+  AdjustmentsHorizontalIcon,
+  MusicalNoteIcon,
+  FilmIcon
 } from "@heroicons/react/24/outline";
 
 interface ServiceCardProps {
   title: string;
   items: readonly string[];
   index: number;
-  icon: "admin" | "marketing" | "technical" | "creative" | "research" | "support";
+  icon: "editing" | "motion" | "color" | "audio" | "effects" | "production";
 }
 
-type IconComponent = typeof CalendarIcon;
+type IconComponent = typeof VideoCameraIcon;
 
 const iconMap = {
-  admin: CalendarIcon,
-  marketing: ChartBarIcon,
-  technical: CommandLineIcon,
-  creative: PencilSquareIcon,
-  research: MagnifyingGlassIcon,
-  support: ChatBubbleBottomCenterTextIcon
+  editing: VideoCameraIcon,
+  motion: SparklesIcon,
+  color: SwatchIcon,
+  audio: SpeakerWaveIcon,
+  effects: EyeIcon,
+  production: CogIcon
 } as const;
 
 const itemIconMap: Record<string, IconComponent> = {
-  "Calendar Management": CalendarIcon,
-  "Email Organization": EnvelopeIcon,
-  "Document Preparation": DocumentTextIcon,
-  "Data Entry": DocumentTextIcon,
-  "Social Media Management": GlobeAltIcon,
-  "Content Creation": DocumentTextIcon,
-  "Email Campaigns": EnvelopeIcon,
-  "Market Research": PresentationChartLineIcon,
-  "Website Maintenance": GlobeAltIcon,
-  "CRM Management": ChartBarIcon,
-  "Basic Graphic Design": PresentationChartLineIcon,
-  "E-commerce Support": ShoppingCartIcon,
+  "Cutting & Trimming": ScissorsIcon,
+  "Transitions & Effects": SparklesIcon,
+  "Multi-Camera Editing": VideoCameraIcon,
+  "Timeline Organization": FilmIcon,
+  "2D Animation": SparklesIcon,
+  "Title Sequences": PlayIcon,
+  "Logo Animation": SparklesIcon,
+  "Kinetic Typography": PlayIcon,
+  "Color Correction": SwatchIcon,
+  "Cinematic Looks": EyeIcon,
+  "Mood Enhancement": AdjustmentsHorizontalIcon,
+  "Skin Tone Balancing": SwatchIcon,
+  "Audio Mixing": SpeakerWaveIcon,
+  "Sound Design": MusicalNoteIcon,
+  "Music Synchronization": MusicalNoteIcon,
+  "Noise Reduction": AdjustmentsHorizontalIcon,
+  "Green Screen Compositing": EyeIcon,
+  "Special Effects": SparklesIcon,
+  "Object Removal": EyeIcon,
+  "Digital Enhancement": AdjustmentsHorizontalIcon,
+  "Final Rendering": CogIcon,
+  "Format Optimization": CogIcon,
+  "Quality Control": EyeIcon,
+  "Delivery & Export": CogIcon
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, items, index, icon }) => {
@@ -70,7 +82,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, items, index, icon }) 
       
       <ul className="space-y-4">
         {items.map((item, i) => {
-          const ItemIcon = itemIconMap[item] || DocumentTextIcon;
+          const ItemIcon = itemIconMap[item] || VideoCameraIcon;
           return (
             <motion.li 
               key={item}
